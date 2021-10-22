@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		第八题</br>
+		数字1：<input type="text" id="g"></br>
+		数字2：<input type="text" id="h" /></br>
+		<button>比较大小</button>
+		<p></p>
+		<script>
+			let g = document.querySelector('#g');
+			let h = document.querySelector('#h');
+			let but = document.querySelector('button');
+			let para = document.querySelector('p');
+			but.onclick = function(e) {
+				if (g.value === '' || h.value === '') {
+					e.preventDefault(e);
+					para.textContent = '请输入数字';
+				} else {
+					if (isNaN(g.value) || isNaN(h.value)) {
+						e.preventDefault();
+						para.textContent = '请输入数字'
+					}else{
+						let g1=Number(g.value);
+						let h1=Number(h.value);
+						if(g1>h1){
+							para.textContent='数字1大于数字2'
+						}else if(g1<h1){
+							para.textContent='数字1小于数字2'
+					}else{
+							para.textContent='数字1等于数字2'
+						}
+					}
+				}
+			}
+			document.write('<hr>')
+			document.write('第一题');
+			document.write('<br>');
+			let a = 13;
+			let b = 13;
+			if (a > b) {
+				document.write('a大于b');
+			} else if (a < b) {
+				document.write('a小于b');
+			} else {
+				document.write('a等于b');
+			}
+			document.write('<br>');
+			document.write('<hr>');
+			document.write('第二题');
+			document.write('<br>');
+			let e = 10;
+			if (e % 5 === 0) {
+				document.write('可以被5整除')
+			} else {
+				document.write('不可以被5整除')
+			}
+			document.write('<br>');
+			document.write('<hr>');
+			document.write('第三题');
+			document.write('<br>');
+			for (let i = 0; i <= 100; i += 2) {
+				document.write(i + ' ')
+			}
+			document.write('<br>');
+			document.write('<hr>');
+			document.write('第四题');
+			document.write('<br>');
+			let f = 1
+			while (f <= 100) {
+				if (f % 7 === 0) {
+					document.write(f + ' ')
+				}
+				f++
+			}
+			document.write('<br>');
+			document.write('<hr>');
+			document.write('第五题');
+			document.write('<br>');
+			let a1 = 800
+			let b1 = 50
+			let c1 = 100
+			document.write('a1的值是：' + a1 + '<br>');
+			document.write('b1的值是：' + b1 + '<br>');
+			document.write('c1的值是：' + c1 + '<br>');
+			if (a1 > b1 && a1 > c1) {
+				document.write('a1的值是：' + a1)
+			} else if (b1 > a1 && b1 > c1) {
+				document.write('b1的值是：' + b1)
+			} else if (c1 > a1 && c1 > b1) {
+				document.write('c1的值是：' + c1)
+			}
+			document.write('<br>');
+			document.write('<hr>');
+			document.write('第六题');
+			document.write('<br>');
+			let os = '';
+			let js = '';
+			for (let i = 0; i <= 100; i++) {
+				if (i % 2 === 0) {
+					os += i + ' ';
+				} else {
+					js += i + ' ';
+				}
+			}
+			document.write('100以内的奇数：' + js);
+			document.write('<br>');
+			document.write('100以内的偶数是：' + os);
+			document.write('<br>');
+			document.write('<hr>');
+			document.write('第七题');
+			document.write('<br>');
+			// // let k=0;
+			// // let z='';
+			// 	
+			//  for(let i=;i>=0;i--){
+			// 	document.write(i);
+			//  }
+			//  document.write(test(1,2,3,4))
+		</script>
+	</body>
+</html>
